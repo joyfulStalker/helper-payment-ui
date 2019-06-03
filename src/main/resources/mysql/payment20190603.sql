@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 80011
 File Encoding         : 65001
 
-Date: 2019-06-03 21:52:49
+Date: 2019-06-03 21:55:21
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -24,7 +24,7 @@ CREATE TABLE `tt_dictionary` (
   `data_type` int(8) DEFAULT NULL COMMENT '数据类型',
   `business_data_type` int(4) DEFAULT NULL COMMENT '业务数据类型',
   `business_data_descr` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '业务数据描述',
-  `is_deleted` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否被删除 0:否 1:是',
+  `is_deleted` int(8) NOT NULL DEFAULT '10011002' COMMENT '是否被删除',
   `created_by` bigint(11) DEFAULT NULL COMMENT '创建人id',
   `created_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `updated_by` bigint(11) DEFAULT NULL,
@@ -35,16 +35,16 @@ CREATE TABLE `tt_dictionary` (
 -- ----------------------------
 -- Records of tt_dictionary
 -- ----------------------------
-INSERT INTO `tt_dictionary` VALUES ('1', '1000', '1001', '是否状态', '0', null, '2019-06-03 21:10:04', null, null);
-INSERT INTO `tt_dictionary` VALUES ('2', '1001', '10011001', '是', '0', null, '2019-06-03 21:11:44', null, null);
-INSERT INTO `tt_dictionary` VALUES ('3', '1001', '10011002', '否', '0', null, '2019-06-03 21:12:00', null, null);
-INSERT INTO `tt_dictionary` VALUES ('4', '1000', '1002', '性别', '0', null, '2019-06-03 21:31:26', null, null);
-INSERT INTO `tt_dictionary` VALUES ('5', '1002', '10021001', '男', '0', null, '2019-06-03 21:31:40', null, null);
-INSERT INTO `tt_dictionary` VALUES ('6', '1002', '10021002', '女', '0', null, '2019-06-03 21:31:53', null, null);
-INSERT INTO `tt_dictionary` VALUES ('7', '1002', '10021003', '保密', '0', null, '2019-06-03 21:32:21', null, null);
-INSERT INTO `tt_dictionary` VALUES ('8', '1000', '1003', '费用类型', '0', null, '2019-06-03 21:39:20', null, null);
-INSERT INTO `tt_dictionary` VALUES ('9', '1003', '10031001', '成本', '0', null, '2019-06-03 21:42:49', null, null);
-INSERT INTO `tt_dictionary` VALUES ('10', '1003', '10031002', '收入', '0', null, '2019-06-03 21:43:04', null, null);
+INSERT INTO `tt_dictionary` VALUES ('1', '1000', '1001', '是否状态', '10011002', null, '2019-06-03 21:10:04', null, null);
+INSERT INTO `tt_dictionary` VALUES ('2', '1001', '10011001', '是', '10011002', null, '2019-06-03 21:11:44', null, null);
+INSERT INTO `tt_dictionary` VALUES ('3', '1001', '10011002', '否', '10011002', null, '2019-06-03 21:12:00', null, null);
+INSERT INTO `tt_dictionary` VALUES ('4', '1000', '1002', '性别', '10011002', null, '2019-06-03 21:31:26', null, null);
+INSERT INTO `tt_dictionary` VALUES ('5', '1002', '10021001', '男', '10011002', null, '2019-06-03 21:31:40', null, null);
+INSERT INTO `tt_dictionary` VALUES ('6', '1002', '10021002', '女', '10011002', null, '2019-06-03 21:31:53', null, null);
+INSERT INTO `tt_dictionary` VALUES ('7', '1002', '10021003', '保密', '10011002', null, '2019-06-03 21:32:21', null, null);
+INSERT INTO `tt_dictionary` VALUES ('8', '1000', '1003', '费用类型', '10011002', null, '2019-06-03 21:39:20', null, null);
+INSERT INTO `tt_dictionary` VALUES ('9', '1003', '10031001', '成本', '10011002', null, '2019-06-03 21:42:49', null, null);
+INSERT INTO `tt_dictionary` VALUES ('10', '1003', '10031002', '收入', '10011002', null, '2019-06-03 21:43:04', null, null);
 
 -- ----------------------------
 -- Table structure for tt_fee
