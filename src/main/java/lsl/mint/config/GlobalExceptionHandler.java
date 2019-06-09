@@ -1,6 +1,8 @@
 package lsl.mint.config;
 
 import lombok.extern.slf4j.Slf4j;
+import lsl.mint.common.BaseResponse;
+import lsl.mint.common.BizException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -20,6 +22,19 @@ public class GlobalExceptionHandler {
 
 
     /**
+     * @return lsl.mint.common.BaseResponse
+     * @Author liuSongLin
+     * @Description 捕获业务异常
+     * @Date 21:44 2019/6/9
+     * @Param [response, e]
+     **/
+    @ExceptionHandler(BizException.class)
+    public BaseResponse bizExceptionHandler(HttpServletResponse response, BizException e) {
+        log.info(getErrorMsg(e));
+        return new BaseResponse(e.getCode(), e.getMsg());
+    }
+
+    /**
      * @return java.lang.String
      * @Author liuSongLin
      * @Description 全局异常
@@ -27,9 +42,9 @@ public class GlobalExceptionHandler {
      * @Param [response, ex]
      **/
     @ExceptionHandler(Exception.class)
-    public String baseExceptionHandler(HttpServletResponse response, Exception ex) {
-        log.info(getErrorMsg(ex));
-        return ex.getMessage();
+    public BaseResponse baseExceptionHandler(HttpServletResponse response, Exception e) {
+        log.info(getErrorMsg(e));
+        return new BaseResponse(BizException.BIZ_SYSTEM_EXCEPTION.getCode(), BizException.BIZ_SYSTEM_EXCEPTION.getMsg());
     }
 
     /**
