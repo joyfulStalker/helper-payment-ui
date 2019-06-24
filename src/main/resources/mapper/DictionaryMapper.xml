@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lsl.mint.mapper.DictionaryMapper">
+
+    <resultMap id="BaseResultMap" type="lsl.mint.entity.Dictionary">
+        <id column="id" property="id"/>
+        <result column="data_type" property="dataType"/>
+        <result column="business_data_type" property="businessDataType"/>
+        <result column="business_data_descr" property="businessDataDescr"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="created_by" property="createdBy"/>
+        <result column="created_date" property="createdDate"/>
+        <result column="updated_by" property="updatedBy"/>
+        <result column="updated_date" property="updatedDate"/>
+    </resultMap>
+
+    <!-- 通用查询结果列-->
+    <sql id="Base_Column_List">
+        id, data_type AS dataType, business_data_type AS businessDataType, business_data_descr AS businessDataDescr,
+        is_deleted AS isDeleted, created_by AS createdBy, created_date AS createdDate, updated_by AS updatedBy,
+        updated_date AS updatedDate
+    </sql>
+</mapper>

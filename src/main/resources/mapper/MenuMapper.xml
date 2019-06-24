@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lsl.mint.mapper.MenuMapper">
+
+	<resultMap id="BaseResultMap" type="lsl.mint.entity.Menu">
+		<id column="id" property="id" />
+		<result column="pid" property="pid" />
+		<result column="path" property="path" />
+		<result column="component" property="component" />
+		<result column="name" property="name" />
+		<result column="menu_show" property="menuShow" />
+		<result column="icon_cls" property="iconCls" />
+		<result column="delete_flag" property="deleteFlag" />
+		<result column="leaf" property="leaf" />
+		<result column="created_by" property="createdBy" />
+		<result column="created_date" property="createdDate" />
+		<result column="updated_by" property="updatedBy" />
+		<result column="updated_date" property="updatedDate" />
+	</resultMap>
+
+    <!-- 通用查询结果列-->
+    <sql id="Base_Column_List">
+        id, pid, path, component, name, menu_show AS menuShow, icon_cls AS iconCls, delete_flag AS deleteFlag, leaf, created_by AS createdBy, created_date AS createdDate, updated_by AS updatedBy, updated_date AS updatedDate
+    </sql>
+</mapper>

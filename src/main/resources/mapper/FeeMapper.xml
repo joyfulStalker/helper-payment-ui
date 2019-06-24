@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lsl.mint.mapper.FeeMapper">
+
+	<resultMap id="BaseResultMap" type="lsl.mint.entity.Fee">
+		<id column="id" property="id" />
+		<result column="fee_type" property="feeType" />
+		<result column="tt_fee_cause" property="ttFeeCause" />
+		<result column="total_cost" property="totalCost" />
+		<result column="is_settled" property="isSettled" />
+		<result column="actual_paid" property="actualPaid" />
+		<result column="fee_time" property="feeTime" />
+		<result column="remark" property="remark" />
+		<result column="created_by" property="createdBy" />
+		<result column="created_date" property="createdDate" />
+		<result column="updated_by" property="updatedBy" />
+		<result column="updated_date" property="updatedDate" />
+	</resultMap>
+
+    <!-- 通用查询结果列-->
+    <sql id="Base_Column_List">
+        id, fee_type AS feeType, tt_fee_cause AS ttFeeCause, total_cost AS totalCost, is_settled AS isSettled, actual_paid AS actualPaid, fee_time AS feeTime, remark, created_by AS createdBy, created_date AS createdDate, updated_by AS updatedBy, updated_date AS updatedDate
+    </sql>
+</mapper>

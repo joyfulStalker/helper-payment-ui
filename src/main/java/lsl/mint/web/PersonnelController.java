@@ -1,0 +1,18 @@
+package lsl.mint.web;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * <p>
+ * 人员信息/公司信息  前端控制器
+ * </p>
+ *
+ * @author liuSongLin
+ * @since 2019-06-09
+ */
+@RestController
+@RequestMapping("/personnel")
+public class PersonnelController {
+	
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lsl.mint.mapper.FeePaymentDetailMapper">
+
+	<resultMap id="BaseResultMap" type="lsl.mint.entity.FeePaymentDetail">
+		<id column="id" property="id" />
+		<result column="tt_fee_id" property="ttFeeId" />
+		<result column="fee_amount" property="feeAmount" />
+		<result column="pay_time" property="payTime" />
+		<result column="drawee_id" property="draweeId" />
+		<result column="drawee" property="drawee" />
+		<result column="payee_id" property="payeeId" />
+		<result column="payee" property="payee" />
+		<result column="remark" property="remark" />
+	</resultMap>
+
+    <!-- 通用查询结果列-->
+    <sql id="Base_Column_List">
+        id, tt_fee_id AS ttFeeId, fee_amount AS feeAmount, pay_time AS payTime, drawee_id AS draweeId, drawee, payee_id AS payeeId, payee, remark
+    </sql>
+</mapper>

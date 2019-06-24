@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lsl.mint.mapper.FeeCauseMapper">
+
+	<resultMap id="BaseResultMap" type="lsl.mint.entity.FeeCause">
+		<id column="id" property="id" />
+		<result column="business_type" property="businessType" />
+		<result column="describe" property="describe" />
+		<result column="created_by" property="createdBy" />
+		<result column="created_date" property="createdDate" />
+		<result column="updated_by" property="updatedBy" />
+		<result column="updated_date" property="updatedDate" />
+	</resultMap>
+
+    <!-- 通用查询结果列-->
+    <sql id="Base_Column_List">
+        id, business_type AS businessType, describe, created_by AS createdBy, created_date AS createdDate, updated_by AS updatedBy, updated_date AS updatedDate
+    </sql>
+</mapper>
